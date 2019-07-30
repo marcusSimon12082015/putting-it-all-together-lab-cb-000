@@ -39,7 +39,16 @@ export default class App extends React.Component{
     }
   }
 
-  stay(){}
+  stay(){
+    if (this.calculateUserScore() !== "BUST") {
+      while (this.calculateAiScore() < this.calculateUserScore()) {
+        if (this.calculateAiScore() === "BUST") {
+          return
+        }
+        this.hitMe("ai");
+      }
+    }    
+  }
 
 
   render(){
