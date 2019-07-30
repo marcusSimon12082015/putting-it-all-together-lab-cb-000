@@ -31,3 +31,28 @@ export function setUserCards(state){
     payload:cloneObject
   }
 }
+
+export function hitUser(state){
+  let cloneObject = JSON.parse(JSON.stringify(state));
+  let randomIndex = Math.floor(Math.random() * cloneObject.deck.length);
+  cloneObject.userCards.push(cloneObject.deck[randomIndex]);
+  cloneObject.deck.splice(randomIndex,1);
+
+  return{
+    type:'HIT_USER',
+    payload:cloneObject
+  }
+}
+
+export function hitAI(state){
+  let cloneObject = JSON.parse(JSON.stringify(state));
+  let randomIndex = Math.floor(Math.random() * cloneObject.deck.length);
+  cloneObject.aiCards.push(cloneObject.deck[randomIndex]);
+  cloneObject.deck.splice(randomIndex,1);
+
+  return{
+    type:'HIT_AI',
+    payload:cloneObject
+  }
+}
+
