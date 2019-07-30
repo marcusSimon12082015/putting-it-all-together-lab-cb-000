@@ -2,12 +2,12 @@ import React from 'react'
 
 const UserBlackjack = (props) => {
 
-  const hitMe = (form,e) => {
+  const hitMe = (e) => {
     e.preventDefault();
     props.hitMe("user");
   }
 
-  const stay = (form,e) => {
+  const stay = (e) => {
     e.preventDefault();
     props.stay();
   }
@@ -19,10 +19,10 @@ const UserBlackjack = (props) => {
      <ul>
        {props.userCards.map(({name,value})=> <li>{name}</li>)}
      </ul>
-     <form onSubmit={hitMe(props)}>
+     <form onSubmit={hitMe}>
        <button type="submit"> Hit Me </button>
      </form>
-     <form onSubmit={stay(props)}>
+     <form onSubmit={stay}>
        <button type="submit"> Stay </button>
      </form>
    </div>
