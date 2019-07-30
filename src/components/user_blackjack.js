@@ -8,10 +8,10 @@ const UserBlackjack = (props) => {
      <ul>
        {props.userCards.map(({name,value})=> <li>{name}</li>)}
      </ul>
-     <form onSubmit={this.hitMe}>
+     <form onSubmit={hitMe(props)}>
        <button type="submit"> Hit Me </button>
      </form>
-     <form onSubmit={this.stay}>
+     <form onSubmit={stay(props)}>
        <button type="submit"> Stay </button>
      </form>
    </div>
