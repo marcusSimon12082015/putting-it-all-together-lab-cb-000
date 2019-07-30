@@ -18,4 +18,9 @@ const UserBlackjack = (props) => {
   );
 }
 
+const hitMe = (event,props) => {
+  event.preventDefault();
+  props.hitMe("user");
+}
+
 export default UserBlackjack;
