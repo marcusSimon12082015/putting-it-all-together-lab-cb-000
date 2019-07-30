@@ -20,7 +20,12 @@ export default class App extends React.Component{
   }
 
   calculateAiScore(){
-    return this.props.store.getState().aiCards.reduce((sum,card) => {return sum + card.value},0);
+    let score = this.props.store.getState().aiCards.reduce((sum,card) => {return sum + card.value},0);
+    if (score > 21) {
+      return "BUST";
+    }else {
+      return score;
+    }
   }
 
   calculateUserScore(){
