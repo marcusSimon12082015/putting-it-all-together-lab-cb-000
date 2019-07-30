@@ -53,7 +53,7 @@ export default class App extends React.Component{
 
   render(){
     return(<div>
-      <UserBlackjack userCards={this.props.store.getState().userCards} score={this.calculateUserScore} hitMe={this.hitMe} stay={this.stay}/>
+      <UserBlackjack userCards={this.props.store.getState().userCards} score={this.calculateUserScore} hitMe={this.hitMe} stay={this.stay} calculateAiScore={this.calculateAiScore}/>
       <AIBlackjack aiCards={this.props.store.getState().aiCards} score={this.calculateAiScore} hitMe={this.hitMe} userScore={this.calculateUserScore}/>
       </div>)
   }
