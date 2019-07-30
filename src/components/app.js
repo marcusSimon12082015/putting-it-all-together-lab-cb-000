@@ -1,7 +1,6 @@
 import React from 'react'
 import AIBlackjack from './ai_blackjack.js'
 import UserBlackjack from './user_blackjack.js'
-import { hitAi, hitUser } from '../actions/blackjack_actions'
 
 export default class App extends React.Component{
   constructor(props){
