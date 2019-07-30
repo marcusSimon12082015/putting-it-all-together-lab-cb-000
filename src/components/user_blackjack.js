@@ -11,7 +11,7 @@ const UserBlackjack = (props) => {
     event.preventDefault();
     props.stay();
   }
-  
+
   return(
     <div>
      <h1>Player1</h1>
