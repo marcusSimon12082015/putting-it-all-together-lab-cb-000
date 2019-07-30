@@ -23,4 +23,9 @@ const hitMe = (event,props) => {
   props.hitMe("user");
 }
 
+const stay = (event,props) => {
+  event.preventDefault();
+  props.stay();
+}
+
 export default UserBlackjack;
