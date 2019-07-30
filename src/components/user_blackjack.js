@@ -2,12 +2,12 @@ import React from 'react'
 
 const UserBlackjack = (props) => {
 
-  const hitMe = (e,props) => {
+  const hitMe = (e) => {
     e.preventDefault();
     props.hitMe("user");
   }
 
-  const stay = (e,props) => {
+  const stay = (e) => {
     e.preventDefault();
     props.stay();
   }
