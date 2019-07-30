@@ -55,4 +55,3 @@ export function hitAI(state){
     payload:cloneObject
   }
 }
-
