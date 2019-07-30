@@ -29,7 +29,14 @@ export default class App extends React.Component{
   }
 
   calculateUserScore(){
-    return this.props.store.getState().userCards.reduce((sum,card) => {return sum + card.value},0);
+    let score = this.props.store.getState().userCards.reduce((sum,card) => {return sum + card.value},0);
+    if (score > 21) {
+      return "BUST"
+    }else if (this.calculateAiScore() === "BUST") {
+      return "Winner!";
+    }else{
+      return score;
+    }
   }
 
   stay(){}
