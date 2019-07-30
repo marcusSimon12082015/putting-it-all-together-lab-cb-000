@@ -1,6 +1,17 @@
 import React from 'react'
 
 const UserBlackjack = (props) => {
+
+  const hitMe = (event,props) => {
+    event.preventDefault();
+    props.hitMe("user");
+  }
+
+  const stay = (event,props) => {
+    event.preventDefault();
+    props.stay();
+  }
+  
   return(
     <div>
      <h1>Player1</h1>
@@ -16,16 +27,6 @@ const UserBlackjack = (props) => {
      </form>
    </div>
   );
-}
-
-const hitMe = (event,props) => {
-  event.preventDefault();
-  props.hitMe("user");
-}
-
-const stay = (event,props) => {
-  event.preventDefault();
-  props.stay();
 }
 
 export default UserBlackjack;
