@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { createStore } from './store'
 import blackjackReducer from './reducers/blackjack_reducer.js'
 
-import { fetchDeck } from './actions/blackjack_actions'
+import { fetchDeck, setAICards, setUserCards } from './actions/blackjack_actions'
 import App from './components/app'
 
 
