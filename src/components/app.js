@@ -11,7 +11,13 @@ export default class App extends React.Component{
       this.stay = this.stay.bind(this);
   }
 
-  hitMe(){}
+  hitMe(user){
+    if (user === "user") {
+      this.props.store.dispatch(hitUser(this.props.store.getState().deck));
+    }else {
+      this.props.store.dispatch(hitAi(this.props.store.getState().deck));
+    }
+  }
 
   calculateAiScore(){
     return this.props.store.getState().aiCards.reduce((sum,card) => {return sum + card.value},0);
