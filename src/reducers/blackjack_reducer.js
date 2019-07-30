@@ -64,6 +64,10 @@ export default (state={}, action) => {
       return action.payload
     case 'SET_USER_CARDS':
       return action.payload
+    case 'HIT_AI':
+      return action.payload
+    case 'HIT_USER':
+      return action.payload
     default:
       return state
   }
