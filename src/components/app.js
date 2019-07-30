@@ -14,9 +14,9 @@ export default class App extends React.Component{
 
   hitMe(user){
     if (user === "user") {
-      this.props.store.dispatch(hitUser(this.props.store.getState().deck));
+      this.props.store.dispatch(hitUser(this.props.store.getState()));
     }else {
-      this.props.store.dispatch(hitAi(this.props.store.getState().deck));
+      this.props.store.dispatch(hitAi(this.props.store.getState()));
     }
   }
 
